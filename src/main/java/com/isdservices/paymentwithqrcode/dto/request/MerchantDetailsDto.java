@@ -1,4 +1,4 @@
-package com.isdservices.paymentwithqrcode.dto;
+package com.isdservices.paymentwithqrcode.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

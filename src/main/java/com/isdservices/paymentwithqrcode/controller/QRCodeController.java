@@ -1,8 +1,7 @@
 package com.isdservices.paymentwithqrcode.controller;
 
 import com.google.zxing.WriterException;
-import com.isdservices.paymentwithqrcode.dto.MerchantDetailsDto;
-import com.isdservices.paymentwithqrcode.entity.MerchantDetails;
+import com.isdservices.paymentwithqrcode.dto.request.MerchantDetailsDto;
 import com.isdservices.paymentwithqrcode.service.QRCodeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

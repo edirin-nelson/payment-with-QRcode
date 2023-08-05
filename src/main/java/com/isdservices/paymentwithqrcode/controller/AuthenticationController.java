@@ -7,7 +7,7 @@ import com.isdservices.paymentwithqrcode.dto.response.LoginResponse;
 import com.isdservices.paymentwithqrcode.exception.UserAccountDisabledException;
 import com.isdservices.paymentwithqrcode.exception.UserAlreadyExistsException;
 import com.isdservices.paymentwithqrcode.exception.UserNotFoundException;
-import com.isdservices.paymentwithqrcode.model.User;
+import com.isdservices.paymentwithqrcode.entity.User;
 import com.isdservices.paymentwithqrcode.service.AuthenticationService;
 import com.isdservices.paymentwithqrcode.service.UserService;
 import jakarta.validation.Valid;

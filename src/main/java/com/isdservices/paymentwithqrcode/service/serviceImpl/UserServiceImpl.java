@@ -4,7 +4,7 @@ package com.isdservices.paymentwithqrcode.service.serviceImpl;
 import com.isdservices.paymentwithqrcode.dto.request.RegisterRequest;
 import com.isdservices.paymentwithqrcode.enums.Role;
 import com.isdservices.paymentwithqrcode.exception.UserAlreadyExistsException;
-import com.isdservices.paymentwithqrcode.model.User;
+import com.isdservices.paymentwithqrcode.entity.User;
 import com.isdservices.paymentwithqrcode.repository.UserRepository;
 import com.isdservices.paymentwithqrcode.service.UserService;
 import lombok.RequiredArgsConstructor;
