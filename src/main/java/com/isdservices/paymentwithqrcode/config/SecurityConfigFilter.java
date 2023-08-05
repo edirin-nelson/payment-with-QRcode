@@ -36,7 +36,8 @@ public class SecurityConfigFilter {
             "/swagger-resources/**",
             "/configuration/ui",
             "/configuration/security",
-            "/password/**"
+            "/password/**",
+            "/api/qrcode/**"
     };
 
 
