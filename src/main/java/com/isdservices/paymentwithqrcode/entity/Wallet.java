@@ -1,4 +1,4 @@
-package com.isdservices.paymentwithqrcode.model;
+package com.isdservices.paymentwithqrcode.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

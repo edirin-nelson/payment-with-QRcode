@@ -1,4 +1,4 @@
-package com.isdservices.paymentwithqrcode.model;
+package com.isdservices.paymentwithqrcode.entity;
 
 import com.isdservices.paymentwithqrcode.enums.Role;
 import jakarta.persistence.*;
