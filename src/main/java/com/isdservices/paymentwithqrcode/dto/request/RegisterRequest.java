@@ -4,10 +4,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.validator.constraints.Length;
 
 @Data
@@ -41,4 +38,9 @@ public class RegisterRequest {
     @Size(min = 4, max = 4, message = "Must be a 4-digit string")
     @Pattern(regexp = "\\d+", message = "Only digits are allowed")
     private String pin;
+
+
+    @Size(min = 11, max = 11, message = "Must be a 11-digit string")
+    @Pattern(regexp = "\\d+", message = "Only digits are allowed")
+    private String bvn;
 }

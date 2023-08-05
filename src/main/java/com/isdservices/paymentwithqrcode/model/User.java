@@ -46,13 +46,15 @@ public class User implements UserDetails {
 
     private String pin;
 
+    private String bvn;
+
     @CreationTimestamp
     private LocalDateTime createdAt;
 
     @UpdateTimestamp
     private LocalDateTime modifiedAt;
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Wallet wallet;
 
     @Override

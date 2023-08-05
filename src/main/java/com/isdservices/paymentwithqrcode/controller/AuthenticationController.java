@@ -11,6 +11,7 @@ import com.isdservices.paymentwithqrcode.model.User;
 import com.isdservices.paymentwithqrcode.service.AuthenticationService;
 import com.isdservices.paymentwithqrcode.service.UserService;
 import jakarta.validation.Valid;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -32,7 +33,7 @@ public class AuthenticationController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<User> registerUser(@RequestBody @Valid RegisterRequest request) throws UserAlreadyExistsException, UserNotFoundException {
+    public ResponseEntity<User> registerUser(@RequestBody @Valid @NonNull RegisterRequest request) throws UserAlreadyExistsException, UserNotFoundException {
         return ResponseEntity.ok(userService.registerUser(request));
     }
 
