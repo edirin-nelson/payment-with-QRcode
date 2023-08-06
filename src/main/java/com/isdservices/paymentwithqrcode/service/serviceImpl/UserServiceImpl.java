@@ -17,6 +17,7 @@ import com.isdservices.paymentwithqrcode.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -72,6 +73,7 @@ public class UserServiceImpl implements UserService {
                .phonenumber(user.getPhoneNumber())
                .firstname(user.getFirstName())
                .lastname(user.getLastName())
+               .amount(5000)
                .narration("account creation for " +user.getFirstName() +" "+user.getLastName())
                .build();
 
@@ -79,7 +81,7 @@ public class UserServiceImpl implements UserService {
         HttpEntity<CreateAccountRequest> request = new HttpEntity<>(accountCreation, header.getHeaders());
         String url = FlutterURLs.BASE_URL + FlutterURLs.CREATE_ACCOUNT;
 
-        ResponseEntity<CreateAccountResponse> response = restTemplate.postForEntity(url, request, CreateAccountResponse.class );
+        ResponseEntity<CreateAccountResponse> response = restTemplate.exchange(url, HttpMethod.POST, request, CreateAccountResponse.class );
         CreateAccountResponse resp = response.getBody();
 
         if(resp.getStatus().equals("success") && resp.getData().getResponse_code().equals("02")) {
